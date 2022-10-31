@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="dist/style/app.min.css">
+    <script src="/dist/scripts/app.js" defer></script>
+</head>
+
+<body>
+
+    <header class="container-fluid bg-primary">
+        <div class="container-lg p-3">
+            <h2 class="display-6 fw-bold text-white text-md-center">Weather<span class="text-secondary">App</span></h2>
+        </div>
+    </header>
+
+    <main>
+        <div class="container-lg d-flex flex-column flex-lg-row justify-content-xxl-between pt-xl-5">
+
+            <div class="row order-1 d-flex flex-column align-items-start col-lg-7">
+
+                <div class="col-12 col-lg-11 p-4 ps-lg-5 text-md-center order-1">
+                    <h2 class="display-6 fw-bold text-primary mt-5">Be prepared for anything</h2>
+                    <h1 class="display-2 fw-bold text-primary">Know the weather</h1>
+                </div>
+
+                <div class="col-12 col-md-8 col-lg-11 mx-md-auto mx-lg-0 p-4 ps-lg-5 order-2 ">
+                    <form class="d-flex flex-column mt-3 p-3 bg-primary-pastel rounded shadow" action="">
+                        <label class="text-primary fw-bold" for="place-text">Search by address</label>
+                        <hr>
+
+                        <div class="d-flex align-items-center mt-1">
+                            <input class="form-control" autocomplete="off" type="text" name="place-text"
+                                id="place-text">
+                            <div class="mx-2 bg-white p-2 rounded d-flex">
+                                <input type="image" src="dist/img/search.svg" alt="search icon" id="search-icon">
+                            </div>
+                        </div>
+
+                        <small class="text-center text-black my-2">or</small>
+                        <input class="btn btn-secondary text-white mb-2" type="button" value="Use your location">
+
+                        <div class="d-flex justify-content-between my-2">
+                            <input class="btn btn-secondary text-white my-2 location-btn" type="button"
+                                value="Melbourne">
+                                <input class="btn btn-secondary text-white my-2 location-btn" type="button"
+                                value="Antartida">
+                                <input class="btn btn-secondary text-white my-2 location-btn" type="button" value="Bruselas">
+                                <input class="btn btn-secondary text-white my-2 location-btn" type="button" value="Amsterdam">
+                            </div>
+                    </form>
+                </div>
+            </div>
+
+
+            <div class="row order-2 col-12 col-md-8 p-2 pt-xl-5 my-5 col-lg-4 align-self-center">
+                <div class="col mx-md-auto">
+                    <div class="weather-card bg-primary-pastel p-4 d-flex justify-content-center position-relative"
+                        id="weather-card">
+                        <img class="svg-secondary" src="dist/img/weather-icons/clear-day.svg" alt="Clear day image"
+                            width="120" height="120">
+                    </div>
+                    <div class="row next-days-forecast">
+                        <div class="col" id="next-days-forecast"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+</body>
+
+</html>
